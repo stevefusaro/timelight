@@ -11,6 +11,7 @@ import Discover from './modules/Discover'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './index.css';
+import './theme-dashboard/v3/dist/toolkit-inverse.css';
 
 render((
   <Router history={hashHistory}>
