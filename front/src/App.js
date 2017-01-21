@@ -17,7 +17,7 @@ class App extends Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="#">TimeLight</a>
+                <Link to="/" activeClassName="active" className="navbar-brand" onlyActiveOnIndex={true}>TimeLight</Link>
               </div>
               <div id="navbar" className="collapse navbar-collapse">
                 <ul className="nav navbar-nav">
