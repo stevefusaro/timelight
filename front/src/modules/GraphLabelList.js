@@ -5,11 +5,14 @@ class GraphLabelList extends React.Component {
   render() {
     return (
       <div className="graph-label-list">
-        <h1>Labels</h1>
+        <b>Labels</b>
         <ul>
           <li><Link to="/graph/label/Person">Person</Link></li>
-          <li>Company</li>
+          <li><Link to="/graph/label/Company">Company</Link></li>
         </ul>
+
+        {this.props.children}
+
       </div>
     );
   }

@@ -10,6 +10,6 @@ function H1(props) {
 
 export default React.createClass({
   render() {
-    return <div> <H1 /> <GraphLabelList /> </div>
+    return <div> <H1 /> <GraphLabelList /></div>
   }
 })

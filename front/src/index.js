@@ -35,8 +35,10 @@ render((
       <Route path="/discover" component={Discover}/>
 
       <Route path="/graph" component={Graph}/>
-      <Route path="/graph/label" component={GraphLabelList}/>
-      <Route path="/graph/label/:labelName" component={GraphLabel}/>
+      <Route path="/graph/label" component={GraphLabelList}>
+          <Route path="/graph/label/:labelName" component={GraphLabel}/>
+      </Route>
+
 
     </Route>
   </Router>
