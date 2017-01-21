@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'core',
     'tv',
 ]
@@ -112,3 +113,12 @@ neo_config.DATABASE_URL = 'bolt://neo4j:ezpass@localhost:7687'
 
 # API Keys
 TV_MEDIA_API_KEY = 'd379e3edd5a3981eaa0067326c4573cf'
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
