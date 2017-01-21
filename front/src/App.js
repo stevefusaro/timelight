@@ -17,12 +17,13 @@ class App extends Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="#">Time Light</a>
+                <a className="navbar-brand" href="#">TimeLight</a>
               </div>
               <div id="navbar" className="collapse navbar-collapse">
                 <ul className="nav navbar-nav">
                   <li><Link to="/projections" activeClassName="active">Projections</Link></li>
                   <li><Link to="/discover" activeClassName="active">Discover</Link></li>
+                  <li><Link to="/graph" activeClassName="active">Graph</Link></li>
                 </ul>
               </div>
             </div>

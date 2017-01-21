@@ -3,6 +3,6 @@ import React from 'react'
 
 export default React.createClass({
   render() {
-    return <div>Projections</div>
+    return <h1>Projections</h1>
   }
 })
