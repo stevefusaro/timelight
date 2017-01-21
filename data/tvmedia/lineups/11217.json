@@ -1,0 +1,101 @@
+[
+  {
+    "lineupID": "5672",
+    "lineupName": "Optimum-Brooklyn, NY",
+    "lineupType": "CAB",
+    "providerID": "89",
+    "providerName": "Optimum TV",
+    "serviceArea": "Brooklyn, NY",
+    "country": "USA"
+  },
+  {
+    "lineupID": "5672D",
+    "lineupName": "Optimum-Brooklyn, NY - Digital",
+    "lineupType": "CAB",
+    "providerID": "89",
+    "providerName": "Optimum TV",
+    "serviceArea": "Brooklyn, NY ",
+    "country": "USA"
+  },
+  {
+    "lineupID": "2829",
+    "lineupName": "Time Warner-Brooklyn\/Queens, NY",
+    "lineupType": "CAB",
+    "providerID": "69",
+    "providerName": "Time Warner Cable",
+    "serviceArea": "Brooklyn\/Queens, NY",
+    "country": "USA"
+  },
+  {
+    "lineupID": "2829D",
+    "lineupName": "Time Warner-Brooklyn\/Queens, NY - Digital",
+    "lineupType": "CAB",
+    "providerID": "69",
+    "providerName": "Time Warner Cable",
+    "serviceArea": "Brooklyn\/Queens, NY ",
+    "country": "USA"
+  },
+  {
+    "lineupID": "43117",
+    "lineupName": "Verizon FIOS-Brooklyn, NY",
+    "lineupType": "CAB",
+    "providerID": "223",
+    "providerName": "Verizon FiOS",
+    "serviceArea": "Brooklyn, NY",
+    "country": "USA"
+  },
+  {
+    "lineupID": "5951D",
+    "lineupName": "Verizon FIOS-Downstate NY, NY - Digital",
+    "lineupType": "CAB",
+    "providerID": "223",
+    "providerName": "Verizon FiOS",
+    "serviceArea": "Downstate NY, NY ",
+    "country": "USA"
+  },
+  {
+    "lineupID": "6350",
+    "lineupName": "Broadcast-New York, NY",
+    "lineupType": "OTA",
+    "providerID": "368",
+    "providerName": "Broadcast",
+    "serviceArea": "New York, NY",
+    "country": "USA"
+  },
+  {
+    "lineupID": "2381D",
+    "lineupName": "DirecTV-National, NY - Digital",
+    "lineupType": "SAT",
+    "providerID": "195",
+    "providerName": "DirecTV",
+    "serviceArea": "National, NY ",
+    "country": "USA"
+  },
+  {
+    "lineupID": "36212D",
+    "lineupName": "DirecTV-New York, NY - Digital",
+    "lineupType": "SAT",
+    "providerID": "195",
+    "providerName": "DirecTV",
+    "serviceArea": "New York, NY ",
+    "country": "USA"
+  },
+  {
+    "lineupID": "2384D",
+    "lineupName": "Dish-National, NY - Digital",
+    "lineupType": "SAT",
+    "providerID": "196",
+    "providerName": "Dish Network",
+    "serviceArea": "National, NY ",
+    "country": "USA"
+  },
+  {
+    "lineupID": "36211D",
+    "lineupName": "Dish-New York, NY - Digital",
+    "lineupType": "SAT",
+    "providerID": "196",
+    "providerName": "Dish Network",
+    "serviceArea": "New York, NY ",
+    "country": "USA"
+  }
+]
