@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class GraphLabelList extends React.Component {
   render() {
@@ -6,7 +7,7 @@ class GraphLabelList extends React.Component {
       <div className="graph-label-list">
         <h1>Labels</h1>
         <ul>
-          <li>Person</li>
+          <li><Link to="/graph/label/Person">Person</Link></li>
           <li>Company</li>
         </ul>
       </div>

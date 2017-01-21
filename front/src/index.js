@@ -8,6 +8,8 @@ import Projections from './modules/Projections'
 import Discover from './modules/Discover'
 import Graph from './modules/Graph'
 
+import GraphLabel from './modules/GraphLabel'
+
 //global.jQuery = require('jquery');  // TODO improve: http://stackoverflow.com/questions/28393674/jquery-not-define-in-bootstrap-module
 //require('bootstrap');
 
@@ -25,7 +27,10 @@ render((
     <Route path="/" component={App}>
       <Route path="/projections" component={Projections}/>
       <Route path="/discover" component={Discover}/>
+
       <Route path="/graph" component={Graph}/>
+      <Route path="/graph/label/:labelName" component={GraphLabel}/>
+
     </Route>
   </Router>
 ), document.getElementById('root'))
