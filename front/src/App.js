@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -28,8 +28,6 @@ class App extends Component {
               </div>
             </div>
           </nav>
-
-
 
         <div className="container">
             {this.props.children}
