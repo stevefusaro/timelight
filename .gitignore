@@ -89,3 +89,4 @@ ENV/
 .ropeproject
 
 front/node_modules/
+data/neo4j/
