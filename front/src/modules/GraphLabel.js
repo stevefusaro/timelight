@@ -5,7 +5,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2>{this.props.params.labelName}</h2>
+        <h2>Label: {this.props.params.labelName}</h2>
       </div>
     )
   }
