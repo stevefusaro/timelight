@@ -9,6 +9,7 @@ driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", 
 
 
 def _run_query(query, params=None):
+    params = params or {}
     resp = []
     with driver.session() as session:
         with session.begin_transaction() as tx:
@@ -28,8 +29,10 @@ class GraphApi(ViewSet):
 
     @list_route(methods=['get'])
     def label_nodes(self, request):
-        query = "MATCH (person:Person) RETURN person LIMIT 200"
-        rows = _run_query(query)
+        label = request.GET.get('label')
+        assert label, 'Label is required in GET'
+        query = "MATCH (person:{label}) RETURN person LIMIT 200".format(label=label)
+        rows = _run_query(query, params={'label': label})
         nodes = [row[0].__dict__ for row in rows]  # keys: labels, properties, id
         for node in nodes:
             node['labels'] = list(node['labels'])  # convert from set

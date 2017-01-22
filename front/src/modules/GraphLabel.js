@@ -1,5 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
+import $ from 'jquery'
 
 class GraphLabel extends React.Component{
 
@@ -13,8 +14,8 @@ class GraphLabel extends React.Component{
   }
 
   fetchNodes() {
-    const url = 'http://localhost:8000/graph/label_nodes';
-    fetch(url,)
+    const url = 'http://localhost:8000/graph/label_nodes?label=' + this.props.params.labelName; // + $.param({label: "Person"});
+    fetch(url)
       .then(response => response.json())
       .then(responseJson => 
         this.setState({nodes:responseJson})
