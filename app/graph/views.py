@@ -8,16 +8,25 @@ from neo4j.v1 import GraphDatabase, basic_auth
 driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", "ezpass"), encrypted=False)
 
 
+def _run_query(query, params=None):
+    resp = []
+    with driver.session() as session:
+        with session.begin_transaction() as tx:
+            for row in tx.run(query):
+                resp.append(row)
+    return resp
+
+
 class GraphApi(ViewSet):
     authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = ()
 
     @list_route(methods=['get'])
     def q(self, request):
-        resp = []
         query = "MATCH (a:Person) return a"
-        with driver.session() as session:
-            with session.begin_transaction() as tx:
-                for row in tx.run(query):
-                    resp.append(row)
-        return Response(resp)
+        return Response(_run_query(query))
+
+    @list_route(methods=['get'])
+    def label_nodes(self, request):
+        query = "MATCH (person:Person) RETURN person LIMIT 200"
+        return Response(_run_query(query))
