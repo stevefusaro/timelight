@@ -1,18 +1,18 @@
 import React from 'react'
-
+import _ from 'lodash'
 
 class GraphLabel extends React.Component{
 
   constructor() {
-    super();
-    this.state = { nodes: [] };
+    super()
+    this.state = { nodes: [] }
   }
 
   componentDidMount() {
-    this.getNodes();
+    this.fetchNodes()
   }
 
-  getNodes() {
+  fetchNodes() {
     const url = 'http://localhost:8000/graph/label_nodes';
     fetch(url,)
       .then(response => response.json())
@@ -22,6 +22,12 @@ class GraphLabel extends React.Component{
       .catch(error => console.error(error));
   }
 
+  nodeDisplay(node) {
+    return Object.keys(node.properties).map(k =>
+      <span key={k}><b>{k}</b> = {node.properties[k]}</span>
+    )
+  }
+
   render() {
     return (
       <div>
@@ -29,7 +35,9 @@ class GraphLabel extends React.Component{
         <h4>Nodes</h4>
         <ul>
           {this.state.nodes.map(node =>
-            <li>{node.person.first_name}</li>
+            <li key={node.id}>
+              {this.nodeDisplay(node)}
+            </li>
           )}
         </ul>
       </div>

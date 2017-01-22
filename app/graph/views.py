@@ -29,4 +29,8 @@ class GraphApi(ViewSet):
     @list_route(methods=['get'])
     def label_nodes(self, request):
         query = "MATCH (person:Person) RETURN person LIMIT 200"
-        return Response(_run_query(query))
+        rows = _run_query(query)
+        nodes = [row[0].__dict__ for row in rows]  # keys: labels, properties, id
+        for node in nodes:
+            node['labels'] = list(node['labels'])  # convert from set
+        return Response(nodes)
