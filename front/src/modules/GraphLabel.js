@@ -22,9 +22,32 @@ class GraphLabel extends React.Component{
       .catch(error => console.error(error));
   }
 
+  // Not used
   nodeDisplay(node) {
     return Object.keys(node.properties).map(k =>
       <span key={k}><b>{k}</b> = {node.properties[k]}</span>
+    )
+  }
+
+  tableHeaders() {
+    if (this.state.nodes.length > 0){
+      return Object.keys(this.state.nodes[0].properties).map(key =>
+        <th key={key}>{key}</th>
+      )
+    }
+  }
+
+  tableRows() {
+    return this.state.nodes.map(node =>
+      <tr key={node.id}>
+        {this.tableRow(node)}
+      </tr>
+    )
+  }
+
+  tableRow(node) {
+    return Object.keys(node.properties).map(k =>
+      <td key={k}>{node.properties[k]}</td>
     )
   }
 
@@ -33,13 +56,16 @@ class GraphLabel extends React.Component{
       <div>
         <h2>Label: {this.props.params.labelName}</h2>
         <h4>Nodes</h4>
-        <ul>
-          {this.state.nodes.map(node =>
-            <li key={node.id}>
-              {this.nodeDisplay(node)}
-            </li>
-          )}
-        </ul>
+          <table className="table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                {this.tableHeaders()}
+              </tr>
+            </thead>
+            <tbody>
+              {this.tableRows()}
+            </tbody>
+          </table>
       </div>
     )
   }
