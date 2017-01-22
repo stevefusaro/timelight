@@ -29,7 +29,7 @@ class GraphLabelList extends React.Component {
         <ul>
           {this.state.labels.map(label =>
             <li key={label}>
-              <Link to="/graph/label/:{label}">{label}</Link>
+              <Link to={`/graph/label/${label}`}>{label}</Link>
             </li>
           )}
         </ul>
